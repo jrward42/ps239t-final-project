@@ -2,16 +2,14 @@ This is a template you can use for your final project. Fill in each section with
 
 ## Short Description
 
-Give a short, 1-2 paragraph description of your project. Focus on the code, not the theoretical / substantive / academic side of things. 
+My project is a shiny app which allows the user to view different data from the National Material Capacities dataset. It allows the user to select a country and a variable to graph.
 
 ## Dependencies
 
 List what software your code depends on, as well as version numbers, like so:.
 
-1. R, version 3.1
-2. Python 2.7, Anaconda distribution.
-
-(In your code itself, includes commands that install required packages.)
+1. R, version 3.1, to run locally
+2. An internet broswer, to run on the internet
 
 ## Files
 
@@ -19,25 +17,29 @@ List all other files contained in the repo, along with a brief description of ea
 
 ### Data
 
-1. polity.csv: The PolityVI dataset, available here: http://www.systemicpeace.org/inscrdata.html
-2. nyt.csv: Contains data from the New York Times API collected via collect-nyt.ipynb . Includes information on all articles containing the term "Programmer Cat", 1980-2010.
-3. analysis-dataset.csv: The final Analysis Dataset derived from the raw data above. It includes country-year values for all UN countries 1980-2010, with observations for the following variables: 
-    - *ccode*: Correlates of War numeric code for country observation
-    - *year*: Year of observation
-    - *polity*: PolityVI score
-    - *nyt*: Number of New York Times articles about "Programmer Cat"
+1. NMC.CSV: National Material Capacities dataset, Correlates of War Project, Version 4.0, June 2010, availble here: http://www.correlatesofwar.org/data-sets/national-material-capabilities
+2. NMC_Codebook_v_4_0.pdf: the codebook for the above data
+
 
 ### Code
 
-1. 01_collect-nyt.py: Collects data from New York Times API and exports data to the file nyt.csv
-2. 02_merge-data.R: Loads, cleans, and merges the raw Polity and NYT datasets into the Analysis Dataset.
-2. 03_analysis.R: Conducts descriptive analysis of the data, producing the tables and visualizations found in the Results directory.
+1. (directory) app: the files for the shiny app and the data which reads into it
+2. server.r:  the server code for app
+3. ui.i: the user interface for the app
+4. NMC.csv: the data used in the app, see above for details
+5. (directory) this is also functional: the files for the app I posted on bcourses
+6. server.r: server code
+7.ui.r: user interface code
+8. DMID.csv: data used for app, Dyadic Militarized Dispute Data, correlates of War project, found here: http://www.correlatesofwar.org/data-sets/MIDs
+
 
 ### Results
 
-1. coverage-over-time.jpeg: Graphs the number of articles about each region over time.
-2. regression-table.txt: Summarizes the results of OLS regression, modelling *nyt* on a number of covariates.
+1. link.txt: this is a link to the published app
+
 
 ## More Information
+here are direct links to the two apps: 
+https://jessicaward.shinyapps.io/NMC_viewer
+https://jessicaward.shinyapps.io/DMID
 
-Include any other details you think your user might need to reproduce your results. You may also include other information such as your contact information, credits, etc.
